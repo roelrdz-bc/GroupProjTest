@@ -29,7 +29,21 @@
         <tr>
             <td>Fruit Prices 2013.csv</td>
         </tr>
-        <!-- Add other datasets here -->
+        <tr>
+            <td>Fruit Prices 2016.csv</td>
+        </tr>
+        <tr>
+            <td>Fruit Prices 2020.csv</td>
+        </tr>
+        <tr>
+            <td>Vegetable Prices 2013.csv</td>
+        </tr>
+        <tr>
+            <td>Vegetable Prices 2016.csv</td>
+        </tr>
+        <tr>
+            <td>Vegetable Prices 2020.csv</td>
+        </tr>
     </table>
 
     <h3>Columns included</h3>
@@ -42,15 +56,105 @@
             <td>Fruit/Vegetable</td>
             <td>Type of food (apple, oranges, broccoli, etc)</td>
         </tr>
-        <!-- Add other columns here -->
+        <tr>
+            <td>Form</td>
+            <td>Form of food (fresh, canned, dried, juice, frozen)</td>
+        </tr>
+        <tr>
+            <td>RetailPrice</td>
+            <td>Price of food (in $)</td>
+        </tr>
+        <tr>
+            <td>RetailPriceUnit</td>
+            <td>Type of retail price (per pound, per unit, etc)</td>
+        </tr>
+        <tr>
+            <td>Yield</td>
+            <td>Preparation yield factor</td>
+        </tr>
+        <tr>
+            <td>CupEquivalentSize</td>
+            <td>A 1-cup equivalent equals the weight of enough edible food to fill a measuring cup</td>
+        </tr>
+        <tr>
+            <td>CupEquivalentUnit</td>
+            <td>Type of unit (pounds, fluid ounces)</td>
+        </tr>
+        <tr>
+            <td>CupEquivalentPrice</td>
+            <td>Price per edible cup equivalent (the unit of measurement for Federal recommendations for fruit and vegetable consumption)</td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td>Years included (2013, 2016, 2020)</td>
+        </tr>
     </table>
 
-    <h3>Descriptive Statistics</h3>
+    <table>
+        <tr>
+            <th>Data Sets</th>
+        </tr>
+        <tr>
+            <td>Annual person income by county.csv</td>
+        </tr>
+    </table>
+
+    <h3>Columns included</h3>
+    <table>
+        <tr>
+            <th>Columns included</th>
+            <th>Description of columns</th>
+        </tr>
+        <tr>
+            <td>GeoFIPS</td>
+            <td>Geo FIPS of United States states; increases by 1000 by state (01000 = Alabama, etc)</td>
+        </tr>
+        <tr>
+            <td>GeoName</td>
+            <td>Region and state, if no region present only state is listed</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>Type of income; (Personal income (thousands of dollars), Population (persons) 1/, Per capita personal income (dollars) 2/ )</td>
+        </tr>
+        <tr>
+            <td>1Personal income (thousands of dollars)</td>
+            <td>Consists of the income that persons receive in return for their provision of labor, land, and capital used in current production as well as other income, such as personal current transfer receipts. In the state and local personal income accounts the personal income of an area represents the income received by or on behalf of the persons residing in that area. It is calculated as the sum of wages and salaries, supplements to wages and salaries, proprietors' income with inventory valuation (IVA) and capital consumption adjustments (CCAdj), rental income of persons with capital consumption adjustment (CCAdj), personal dividend income, personal interest income, and personal current transfer receipts, less contributions for government social insurance plus the adjustment for residence.</td>
+        </tr>
+        <tr>
+            <td>2Population (persons)</td>
+            <td>The number of individuals (both civilian and military) who reside in a given area.</td>
+        </tr>
+        <tr>
+            <td>3Per capita personal income (dollars)</td>
+            <td>The personal income of a given area divided by the resident population of the area. See "personal income."</td>
+        </tr>
+        <tr>
+            <td>Unit</td>
+            <td>Type of variable; (Thousands of dollars, Number of persons, Dollars)</td>
+        </tr>
+        <tr>
+            <td>2013</td>
+            <td>Price of unit type for 2013</td>
+        </tr>
+        <tr>
+            <td>2016</td>
+            <td>Price of unit type for 2016</td>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>Price of unit type for 2020</td>
+        </tr>
+    </table>
+
+    <h2>Descriptive Statistics</h2>
 
     <h2>Data Analytics</h2>
     <p><strong>Provide data analytics that add clarity to the research question. Thoroughly discuss insight obtained from your visualizations and analysis of aggregated, data. Suggest an excursion, and provide supporting analysis. Plots should be well formatted according to best practices learned in class. Discuss the advantages and challenges of performing analysis in your chosen software tool.</strong></p>
+
+    <h3>Analytical Tools & Methods</h3>
     <p>We will conduct our analyses in R. Using publicly available datasets spanning multiple years, we will look at descriptive statistics and run statistical tests (e.g., t-tests, ANOVA) to investigate the affordability of fruits and vegetables by state across time. Specifically, descriptive statistics will investigate the average, minimum, and maximum prices of fruits and vegetables by year. The ‘ggplot2’ package will be used to visualize the results, including interactive plots of fruit and vegetable prices, income per capita by state, and affordability of fruits and vegetables by state.</p>
-    <p>To quantify affordability, we developed an affordability metric based on the U.S. Department of Agriculture's recommended grocery budget of 11% of one's income (<a href="https://money.usnews.com/money/personal-finance/saving-and-budgeting/articles/how-much-should-i-spend-on-groceries">source</a>). We then further subdivided the 11% and allocated 4% of one's income specifically for produce (so, 2% for fruits and 2% for vegetables). Since we're interested in affordability in relation to dietary guidelines, we calculated the price of a cup equivalent of fruits and vegetables (recommended daily serving; <a href="https://www.nidirect.gov.uk/articles/fruit-and-vegetables">source</a>) for an entire year by multiplying the cup equivalent price by 365. Finally, to categorize a fruit or vegetable as affordable or unaffordable, we compared the yearly cup equivalent price (for fruit and vegetables separately) to 2% of per capita income by state. If the yearly cup equivalent price was greater than 2%, that fruit or vegetable was deemed unaffordable. If the yearly cup equivalent price was less than 2%, that fruit or vegetable was deemed affordable.</p>
+    <p>To quantify affordability, we developed an affordability metric based on the U.S. Department of Agriculture's recommended grocery budget of 11% of one's income (<a href="https://money.usnews.com/money/personal-finance/saving-and-budgeting/articles/how-much-should-i-spend-on-groceries">link</a>). We then further subdivided the 11% and allocated 4% of one's income specifically for produce (so, 2% for fruits and 2% for vegetables). Since we're interested in affordability in relation to dietary guidelines, we calculated the price of a cup equivalent of fruits and vegetables (recommended daily serving; <a href="https://www.nidirect.gov.uk/articles/fruit-and-vegetables">link</a>) for an entire year by multiplying the cup equivalent price by 365. Finally, to categorize a fruit or vegetable as affordable or unaffordable, we compared the yearly cup equivalent price (for fruit and vegetables separately) to 2% of per capita income by state. If the yearly cup equivalent price was greater than 2%, that fruit or vegetable was deemed unaffordable. If the yearly cup equivalent price was less than 2%, that fruit or vegetable was deemed affordable.</p>
     <p>We hope to discover important insights by examining trends in fruit and vegetable affordability by state. These insights will inform policymaking, with a particular focus on enhancing food assistance programs and regulations overseen by the Congressional Committees on Agriculture.</p>
 
     <h3>Questions of Interest</h3>
