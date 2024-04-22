@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive README</title>
+  <title>ADAN-ADEC7900 Group 2</title>
 </head>
 <body>
-  <h1>Interactive README</h1>
-  <p>Below is an embedded Shiny app:</p>
-  <iframe src="https://roelrdz.shinyapps.io/FruitVegPrice/" width="800" height="600"></iframe>
+
+<h1>ADAN-ADEC7900 Group 2</h1>
+
+<h2>Introduction</h2>
+<p><strong>Research Question:</strong></p>
+<p>Are healthy fruits and vegetables affordable to Americans in each state? We aim to analyze the affordability of fruits and vegetables based on the average American household income by capita over multiple years. We hope to investigate whether income constraints influence access to fresh produce versus alternative forms (i.e., canned/frozen) and how this impacts adherence to dietary guidelines. The findings could inform policymakers responsible for food pricing regulations and programs like food stamps, helping them understand the challenges individuals and families face in accessing nutritious foods and potentially guiding adjustments to policies or interventions aimed at improving dietary habits, particularly considering potential differences in affordability between fruits and vegetables.</p>
+
+<p><strong>Decision Maker:</strong></p>
+<p>We plan to target our research for use by the Congressional Committees on Agriculture because they play a crucial role in shaping legislation and policies related to food and agriculture, including programs like the Supplemental Nutrition Assistance Program (SNAP) and other food assistance initiatives.</p>
+
+<h2>Data Summary</h2>
+<p><strong>Provide a short description of the nature of the provided data set and explain how these characteristics affect your analysis methodology. Summarize the data set with basic descriptive statistics as applicable.</strong></p>
+
+<p>The datasets include the average American household income per capita and fruit and vegetables prices from 2013, 2016, 2020. These datasets should allow us to investigate our research questions regarding the affordability of fruits and vegetables based on the average American household income by capita over multiple years. See below for a more in-depth explanation of the variables included in each dataset.</p>
+
+<h3>Included Data</h3>
+
+<p><strong>Fruit and Vegetable Prices Data Sets:</strong></p>
+<ul>
+  <li>Fruit Prices 2013.csv</li>
+  <li>Fruit Prices 2016.csv</li>
+  <li>Fruit Prices 2020.csv</li>
+  <li>Vegetable Prices 2013.csv</li>
+  <li>Vegetable Prices 2016.csv</li>
+  <li>Vegetable Prices 2020.csv</li>
+</ul>
+
+<p><strong>Columns included:</strong></p>
+<table>
+  <tr>
+    <th>Data Sets</th>
+    <th>Description of columns</th>
+  </tr>
+  <tr>
+    <td>Fruit/Vegetable</td>
+    <td>Type of food (apple, oranges, broccoli, etc)</td>
+  </tr>
+  <!-- Add more rows as needed -->
+</table>
+
+<p><strong>Annual Person Income by County Data Set:</strong></p>
+<ul>
+  <li>Annual person income by county.csv</li>
+</ul>
+
+<p><strong>Columns included:</strong></p>
+<table>
+  <tr>
+    <th>Data Sets</th>
+    <th>Description of columns</th>
+  </tr>
+  <tr>
+    <td>GeoFIPS</td>
+    <td>Geo FIPS of United States states; increases by 1000 by state (01000 = Alabama, etc)</td>
+  </tr>
+  <!-- Add more rows as needed -->
+</table>
+
+<h2>Embedded Shiny Apps</h2>
+
+<iframe src="https://roelrdz.shinyapps.io/FruitVegPrice/" width="800" height="600"></iframe>
+
+<iframe src="https://roelrdz.shinyapps.io/IncomeMap/" width="800" height="600"></iframe>
+
 </body>
 </html>
