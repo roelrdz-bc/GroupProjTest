@@ -5,182 +5,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADAN-ADEC7900 Group 2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        aside {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="top">ADAN-ADEC7900 Group 2</h1>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#data-summary">Data Summary</a></li>
+                <li><a href="#descriptive-statistics">Descriptive Statistics</a></li>
+                <li><a href="#data-analytics">Data Analytics</a></li>
+                <li><a href="#questions-of-interest">Questions of Interest</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <nav>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#data-summary">Data Summary</a></li>
-            <li><a href="#descriptive-statistics">Descriptive Statistics</a></li>
-            <li><a href="#data-analytics">Data Analytics</a></li>
-            <li><a href="#questions-of-interest">Questions of Interest</a></li>
-        </ul>
-    </nav>
+    <main>
+        <h1 id="top">ADAN-ADEC7900 Group 2</h1>
 
-    <h2 id="introduction">Introduction</h2>
-    <p>### Research Question</p>
-    <p>Are healthy fruits and vegetables affordable to Americans in each state? We aim to analyze the affordability of fruits and vegetables based on the average American household income by capita over multiple years. We hope to investigate whether income constraints influence access to fresh produce versus alternative forms (i.e., canned/frozen) and how this impacts adherence to dietary guidelines. The findings could inform policymakers responsible for food pricing regulations and programs like food stamps, helping them understand the challenges individuals and families face in accessing nutritious foods and potentially guiding adjustments to policies or interventions aimed at improving dietary habits, particularly considering potential differences in affordability between fruits and vegetables.</p>
-    <p>### Decision Maker</p>
-    <p>We plan to target our research for use by the Congressional Committees on Agriculture because they play a crucial role in shaping legislation and policies related to food and agriculture, including programs like the Supplemental Nutrition Assistance Program (SNAP) and other food assistance initiatives.</p>
+        <h2 id="introduction">Introduction</h2>
+        <p>### Research Question</p>
+        <p>Are healthy fruits and vegetables affordable to Americans in each state? We aim to analyze the affordability of fruits and vegetables based on the average American household income by capita over multiple years. We hope to investigate whether income constraints influence access to fresh produce versus alternative forms (i.e., canned/frozen) and how this impacts adherence to dietary guidelines. The findings could inform policymakers responsible for food pricing regulations and programs like food stamps, helping them understand the challenges individuals and families face in accessing nutritious foods and potentially guiding adjustments to policies or interventions aimed at improving dietary habits, particularly considering potential differences in affordability between fruits and vegetables.</p>
+        <p>### Decision Maker</p>
+        <p>We plan to target our research for use by the Congressional Committees on Agriculture because they play a crucial role in shaping legislation and policies related to food and agriculture, including programs like the Supplemental Nutrition Assistance Program (SNAP) and other food assistance initiatives.</p>
 
-    <h2 id="data-summary">Data Summary</h2>
-    <p>**Provide a short description of the nature of the provided data set
-        and explain how these characteristics affect your analysis methodology. Summarize the
-        data set with basic descriptive statistics as applicable.**</p>
-    <p>The datasets include the average American household income per capita and fruit and vegetables prices from 2013, 2016, 2020. These datasets should allow us to investigate our research questions regarding the affordability of fruits and vegetables based on the average American household income by capita over multiple years. See below for a more in-depth explanation of the variables included in each dataset.</p>
-    <p>### Included Data</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Data Sets</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Fruit Prices 2013.csv</td>
-            </tr>
-            <tr>
-                <td>Fruit Prices 2016.csv</td>
-            </tr>
-            <tr>
-                <td>Fruit Prices 2020.csv</td>
-            </tr>
-            <tr>
-                <td>Vegetable Prices 2013.csv</td>
-            </tr>
-            <tr>
-                <td>Vegetable Prices 2016.csv</td>
-            </tr>
-            <tr>
-                <td>Vegetable Prices 2020.csv</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>**Columns included**</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Columns included</th>
-                <th>Description of columns</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Fruit/Vegetable</td>
-                <td>Type of food (apple, oranges, broccoli, etc)</td>
-            </tr>
-            <tr>
-                <td>Form</td>
-                <td>Form of food (fresh, canned, dried, juice, frozen)</td>
-            </tr>
-            <tr>
-                <td>RetailPrice</td>
-                <td>Price of food (in $)</td>
-            </tr>
-            <tr>
-                <td>RetailPriceUnit</td>
-                <td>Type of retail price (per pound, per unit, etc)</td>
-            </tr>
-            <tr>
-                <td>Yield</td>
-                <td>Preparation yield factor</td>
-            </tr>
-            <tr>
-                <td>CupEquivalentSize</td>
-                <td>A 1-cup equivalent equals the weight of enough edible food to fill a measuring cup</td>
-            </tr>
-            <tr>
-                <td>CupEquivalentUnit</td>
-                <td>Type of unit (pounds, fluid ounces)</td>
-            </tr>
-            <tr>
-                <td>CupEquivalentPrice</td>
-                <td>Price per edible cup equivalent (the unit of measurement for Federal recommendations for fruit and vegetable consumption)</td>
-            </tr>
-            <tr>
-                <td>Year</td>
-                <td>Years included (2013, 2016, 2020)</td>
-            </tr>
-        </tbody>
-    </table>
+        <h2 id="data-summary">Data Summary</h2>
+        <p>**Provide a short description of the nature of the provided data set
+            and explain how these characteristics affect your analysis methodology. Summarize the
+            data set with basic descriptive statistics as applicable.**</p>
+        <p>The datasets include the average American household income per capita and fruit and vegetables prices from 2013, 2016, 2020. These datasets should allow us to investigate our research questions regarding the affordability of fruits and vegetables based on the average American household income by capita over multiple years. See below for a more in-depth explanation of the variables included in each dataset.</p>
+        <p>### Included Data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Sets</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fruit Prices 2013.csv</td>
+                </tr>
+                <tr>
+                    <td>Fruit Prices 2016.csv</td>
+                </tr>
+                <tr>
+                    <td>Fruit Prices 2020.csv</td>
+                </tr>
+                <tr>
+                    <td>Vegetable Prices 2013.csv</td>
+                </tr>
+                <tr>
+                    <td>Vegetable Prices 2016.csv</td>
+                </tr>
+                <tr>
+                    <td>Vegetable Prices 2020.csv</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>**Columns included**</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Columns included</th>
+                    <th>Description of columns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fruit/Vegetable</td>
+                    <td>Type of food (apple, oranges, broccoli, etc)</td>
+                </tr>
+                <tr>
+                    <td>Form</td>
+                    <td>Form of food (fresh, canned, dried, juice, frozen)</td>
+                </tr>
+                <tr>
+                    <td>RetailPrice</td>
+                    <td>Price of food (in $)</td>
+                </tr>
+                <tr>
+                    <td>RetailPriceUnit</td>
+                    <td>Type of retail price (per pound, per unit, etc)</td>
+                </tr>
+                <tr>
+                    <td>Yield</td>
+                    <td>Preparation yield factor</td>
+                </tr>
+                <tr>
+                    <td>CupEquivalentSize</td>
+                    <td>A 1-cup equivalent equals the weight of enough edible food to fill a measuring cup</td>
+                </tr>
+                <tr>
+                    <td>CupEquivalentUnit</td>
+                    <td>Type of unit (pounds, fluid ounces)</td>
+                </tr>
+                <tr>
+                    <td>CupEquivalentPrice</td>
+                    <td>Price per edible cup equivalent (the unit of measurement for Federal recommendations for fruit and vegetable consumption)</td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td>Years included (2013, 2016, 2020)</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <p>### Included Data</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Data Sets</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Annual person income by county.csv</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>**Columns included**</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Columns included</th>
-                <th>Description of columns</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>GeoFIPS</td>
-                <td>Geo FIPS of United States states; increases by 1000 by state (01000 = Alabama, etc)</td>
-            </tr>
-            <tr>
-                <td>GeoName</td>
-                <td>Region and state, if no region present only state is listed</td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td>Type of income; (Personal income (thousands of dollars), Population (persons) 1/, Per capita personal income (dollars) 2/	)</td>
-            </tr>
-            <tr>
-                <td>1Personal income (thousands of dollars)</td>
-                <td>Consists of the income that persons receive in return for their provision of labor, land, and capital used in current production as well as other income, such as personal current transfer receipts. In the state and local personal income accounts the personal income of an area represents the income received by or on behalf of the persons residing in that area. It is calculated as the sum of wages and salaries, supplements to wages and salaries, proprietors' income with inventory valuation (IVA) and capital consumption adjustments (CCAdj), rental income of persons with capital consumption adjustment (CCAdj), personal dividend income, personal interest income, and personal current transfer receipts, less contributions for government social insurance plus the adjustment for residence.</td>
-            </tr>
-            <tr>
-                <td>2Population (persons)</td>
-                <td>The number of individuals (both civilian and military) who reside in a given area.</td>
-            </tr>
-            <tr>
-                <td>3Per capita personal income (dollars)</td>
-                <td>The personal income of a given area divided by the resident population of the area. See "personal income."</td>
-            </tr>
-            <tr>
-                <td>Unit</td>
-                <td>Type of variable; (Thousands of dollars, Number of persons, Dollars)</td>
-            </tr>
-            <tr>
-                <td>2013</td>
-                <td>Price of unit type for 2013</td>
-            </tr>
-            <tr>
-                <td>2016</td>
-                <td>Price of unit type for 2016</td>
-            </tr>
-            <tr>
-                <td>2020</td>
-                <td>Price of unit type for 2020</td>
-            </tr>
-        </tbody>
-    </table>
+        <p>### Included Data</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Sets</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Annual person income by county.csv</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>**Columns included**</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Columns included</th>
+                    <th>Description of columns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GeoFIPS</td>
+                    <td>Geo FIPS of United States states; increases by 1000 by state (01000 = Alabama, etc)</td>
+                </tr>
+                <tr>
+                    <td>GeoName</td>
+                    <td>Region and state, if no region present only state is listed</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Type of income; (Personal income (thousands of dollars), Population (persons) 1/, Per capita personal income (dollars) 2/	)</td>
+                </tr>
+                <tr>
+                    <td>1Personal income (thousands of dollars)</td>
+                    <td>Consists of the income that persons receive in return for their provision of labor, land, and capital used in current production as well as other income, such as personal current transfer receipts. In the state and local personal income accounts the personal income of an area represents the income received by or on behalf of the persons residing in that area. It is calculated as the sum of wages and salaries, supplements to wages and salaries, proprietors' income with inventory valuation (IVA) and capital consumption adjustments (CCAdj), rental income of persons with capital consumption adjustment (CCAdj), personal dividend income, personal interest income, and personal current transfer receipts, less contributions for government social insurance plus the adjustment for residence.</td>
+                </tr>
+                <tr>
+                    <td>2Population (persons)</td>
+                    <td>The number of individuals (both civilian and military) who reside in a given area.</td>
+                </tr>
+                <tr>
+                    <td>3Per capita personal income (dollars)</td>
+                    <td>The personal income of a given area divided by the resident population of the area. See "personal income."</td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td>Type of variable; (Thousands of dollars, Number of persons, Dollars)</td>
+                </tr>
+                <tr>
+                    <td>2013</td>
+                    <td>Price of unit type for 2013</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>Price of unit type for 2016</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Price of unit type for 2020</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h2 id="descriptive-statistics">Descriptive Statistics</h2>
-    <!-- Your descriptive statistics content here -->
+        <h2 id="descriptive-statistics">Descriptive Statistics</h2>
+        <!-- Your descriptive statistics content here -->
 
-    <h2 id="data-analytics">Data Analytics</h2>
-    <!-- Your data analytics content here -->
+        <h2 id="data-analytics">Data Analytics</h2>
+        <!-- Your data analytics content here -->
 
-    <h2 id="questions-of-interest">Questions of Interest</h2>
-    <iframe src="https://roelrdz.shinyapps.io/FruitVegPrice/" width="800" height="600"></iframe>
+        <h2 id="questions-of-interest">Questions of Interest</h2>
+        <iframe src="https://roelrdz.shinyapps.io/FruitVegPrice/" width="800" height="600"></iframe>
+        <iframe src="https://roelrdz.shinyapps.io/IncomeMap/" width="800" height="600"></iframe>
 
+    </main>
 </body>
 
 </html>
+
